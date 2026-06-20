@@ -15,4 +15,4 @@ async function getMessages() {
   return messages;
 }
 
-module.exports = { getMessages };
+export default { getMessages };
