@@ -9,4 +9,8 @@ router.get("/new", (req, res) => {
   res.render("form");
 });
 
+router.post("/new", (req, res) => {
+
+})
+
 export default router;
