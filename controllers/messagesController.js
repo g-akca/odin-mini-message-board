@@ -8,7 +8,7 @@ async function getMessages(req, res) {
     return;
   }
 
-  return messages;
+  res.render("index", { messages });;
 };
 
 export { getMessages };
