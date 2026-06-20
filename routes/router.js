@@ -6,7 +6,7 @@ const router = Router();
 router.get("/", getMessages);
 
 router.get("/new", (req, res) => {
-  res.send("Testing new message route...");
+  res.render("form");
 });
 
 export default router;
