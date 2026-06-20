@@ -15,4 +15,8 @@ async function getMessages() {
   return messages;
 }
 
-export default { getMessages };
+async function addNewMessage(message) {
+  messages.push(message);
+}
+
+export default { getMessages, addNewMessage };

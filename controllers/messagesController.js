@@ -8,7 +8,18 @@ async function getMessages(req, res) {
     return;
   }
 
-  res.render("index", { messages });;
+  res.render("index", { messages });
 };
 
-export { getMessages };
+async function addNewMessage(req, res) {
+  if (!req.body.message || !req.body.name) {
+    res.status(400).send("Please enter your name and message");
+    return;
+  }
+
+  await db.addNewMessage({ text: req.body.message, user: req.body.name, added: new Date() });
+
+  res.redirect("/");
+}
+
+export { getMessages, addNewMessage };
