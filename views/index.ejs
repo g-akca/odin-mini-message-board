@@ -8,5 +8,15 @@
 
   <body>
     <h1>Message Board</h1>
+
+    <ul>
+      <% for (let i = 0; i < messages.length; i++) { %>
+        <li>
+          <strong><%= messages[i].user %></strong>
+          <p><%= messages[i].text %></p>
+          <small><%= messages[i].added %></small>
+        </li>
+      <% } %>
+    </ul>
   </body>
 </html>
