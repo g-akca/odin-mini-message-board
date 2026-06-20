@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Testing index route...");
-});
+const router = require("./routes/router");
+
+app.use("/", router);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}!`)
